@@ -1,87 +1,877 @@
-<style>
-/* Si Wolvden lo permite, esto aplica estilos locales */
-.profile-wrap{
-  max-width: 900px;
-  margin: 10px auto;
-  padding: 18px;
-  border-radius: 14px;
-  background: linear-gradient(120deg, rgba(12,29,78,0.85), rgba(2,1,10,0.6));
-  color: #cfc9c3;
-  font-family: "Arial", sans-serif;
-  box-shadow: 0 6px 30px rgba(0,0,0,0.6);
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-q8mCa3ygiHf_-7l699JEwEJ8esJSOnC9Q&s");
-  background-size: cover;
-  background-blend-mode: multiply;
+body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM-q8mCa3ygiHf_-7l699JEwEJ8esJSOnC9Q&s);
+    background-position: center;
+    font-family: Avara;
+    color: #496fda;
+    font-size: 14px;
+    background-color: #7B542F;
 }
 
-/* caja tipo tarjeta */
-.profile-card{
-  background: rgba(10,18,48,0.6);
-  border: 2px solid rgba(35,60,138,0.6);
-  padding: 12px;
-  border-radius: 12px;
-  color: #e6eefc;
-  margin-bottom: 12px;
+
+
+
+
+a {
+    color: #FF9D00;
+    transition: 0.3s;
 }
 
-/* título grande */
-.profile-title{
-  font-size: 28px;
-  color: #7B542F;
-  margin: 0 0 8px 0;
-  text-transform: none;
+a:hover {
+    color: #B6771D;
+    text-decoration: none;
 }
 
-/* enlaces */
-.profile-card a { color: #FF9D00; text-decoration: none; transition: .25s; }
-.profile-card a:hover { color: #B6771D; text-decoration: underline; }
 
-/* avatar simple */
-.profile-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 14px;
-  border: 3px solid #cec7bf;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 14px;
+#header .navbar-main .nav-link {
+    width: 105px;
+    height: 35px;
+    color: #ffffff00;
+    transition: 0.3s;
 }
 
-/* info al lado del avatar */
-.profile-meta { display: inline-block; vertical-align: middle; max-width: calc(100% - 150px); }
 
-.badge {
-  display:inline-block;
-  padding:4px 8px;
-  border-radius: 999px;
-  background: linear-gradient(to left,#294399,#0b1a48);
-  color:#d0cac3;
-  font-size:13px;
-  margin-right:6px;
+
+#header .navbar-main .nav-item {
+    width: 50px;
+    height: 50px;
+    margin-right: 60px;
+    background: #00000000;
+    border: 3px solid #00000000;
+    border-radius: 100px;
+    transition: 0.5s;
 }
-</style>
 
-<div class="profile-wrap">
-  <div class="profile-card">
-    <div class="profile-avatar">
-      <img src="https://i.imgur.com/your-avatar.png" alt="avatar" style="width:100%;height:100%;object-fit:cover;">
-    </div>
-    <div class="profile-meta">
-      <h1 class="profile-title">FroggoDraws <small style="font-size:14px;color:#d0cac3;">#78572</small></h1>
-      <div style="margin:6px 0;">
-        <span class="badge">Explorador</span>
-        <span class="badge">Otoño</span>
-      </div>
-      <p style="margin:8px 0;color:#e6eefc;">
-        ¡Hola! Aquí puedes poner tu bio corta. Links, emoticones, o una frase cool del día.
-      </p>
-      <p style="margin:0;"><a href="https://wolvden.net">Mi den</a> · <a href="#">Galería</a> · <a href="#">Comunidad</a></p>
-    </div>
-  </div>
+#header .navbar-main .nav-item:hover {
+    border-color: #00000000;
+    background: #00000000;
+}
 
-  <div class="profile-card">
-    <h3 style="margin-top:0;color:#7B542F">Sobre mí</h3>
-    <p>Texto libre —aquí cuentas un poquito sobre tus gustos, tu historia de lobos o lo que quieras.</p>
-  </div>
-</div>
+#header .navbar-main .nav-link .fa {
+    margin-left: 3px;
+    margin-top: 3px;
+    color: #7B542F;
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+i.fa.fa-paw {
+    left: 7px;
+}
+
+i.fa.fa-comments {
+    right: 2px;
+}
+
+i.fa.fa-gem {
+    top: 1px !important;
+    right: 2px;
+}
+
+#header .navbar-main .nav-link .fa.fa-calendar-alt, #header .navbar-main .nav-link .fa.fa-gem {
+    font-size: 1.5rem;
+}
+
+/* 导航超链接 */
+#header .navbar-main .active .nav-link, #header .navbar-main .active .nav-link .fa,
+ #header .navbar-main .nav-link:hover, #header .navbar-main .nav-link:hover .fa{
+    color: #7B542F;
+ }
+
+ #header .navbar-main .nav-link:hover .fa {
+    color: #1678e2;
+    font-size: 1.5rem;
+}
+
+
+/* 顶栏-上 */
+#header .navbar-main {
+    min-height: 80px;
+    background: linear-gradient(to right, #02010a, #0c1d4e, #02010a);
+    color: #cfc9c3;
+    font-family: Avant Garde;
+    font-weight: bold;
+    height: 40px;
+}
+
+/* logo */
+#header .navbar-main .navbar-brand {
+    background-size: 100%;
+}
+
+/* 顶栏-下 */
+#header .navbar-status {
+    background: linear-gradient(to right, #02010a, #0c1d4e, #02010a);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: #b9bad2;
+    font-family: Avant Garde;
+    font-weight: bold;
+    height: 40px;
+}
+
+#header .breadcrumb-nav {
+    background-color: #00000000;
+}
+
+span.d-none.d-lg-inline.navbar-text {
+    color: #3151ad;
+}
+
+li.breadcrumb-item a {
+    color: #d0cac3;
+}
+
+.breadcrumb-item.active {
+    color: #dfd2c5;
+}
+
+#header .navbar-status a {
+    color: #3655af;
+}
+
+#header .navbar-status a:hover {
+    color: #3655af;
+}
+
+/* 书签 */
+.text-danger {
+    color: #3655af !important;
+}
+
+/* 署名 */
+.breadcrumb::after {
+    content: "#5211";
+    font-family: math;
+    font-weight: bold;
+    position: absolute;
+    right: 35px;
+    color: #3655af !important;
+}
+
+/* 货币 */
+i.icon.icon-beetle-silver{
+    background-image: none !important;
+}
+
+i.icon.icon-beetle-silver:before {
+    font-family: 'Font Awesome 5 Free' !important;
+    content: "\f578";
+    font-size: 20px;
+    font-style: normal;
+    color: #838383;
+}
+
+i.icon.icon-beetle-gold{
+    background-image: none !important;
+}
+
+i.icon.icon-beetle-gold:before {
+    font-family: 'Font Awesome 5 Free' !important;
+    content: "\f578";
+    font-size: 20px;
+    font-style: normal;
+    color:#b19806;;
+}
+
+/* 信箱提示 */
+.badge-danger {
+    color: #cfc9c3;
+    background-color: #3655af;
+}
+
+/* 用户菜单 */
+.btn-group-vertical>.btn, .btn-group>.btn {
+    color: #1f3b8f !important;
+    transition: 0.5s;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 25%);
+}
+
+.dropdown-menu {
+    background: #0b1945;
+}
+
+a.dropdown-item {
+    background: #0c1b49 !important;
+    color: #3655af !important;
+}
+
+.dropdown-divider, .table thead th {
+    border-color: #3655af;
+}
+
+.dropdown-item:hover {
+    background: #3655af !important;
+    color: #d0cac3 !important;
+}
+
+/* 面板 */
+.justify-content-end {
+    backdrop-filter: blur(1px);
+}
+
+/* 侧栏 */
+#sidebar {
+    background: linear-gradient(to right, #02010a, #0c1d4e);
+    border-top-left-radius: 25px;
+}
+
+#sidebar .card {
+    margin-top: 10px;
+    border-left: 6px double #233d8a;
+    border-bottom: 0px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #0e225b, #1a295600);
+    color: #496fda;
+}
+
+#sidebar .card a {
+    color: #476fe0;
+}
+
+#sidebar .card a:hover {
+    color: #7a98eb;
+}
+
+/* 用户 */
+h3.mb-3 {
+    text-transform: uppercase;
+}
+
+.w-50 div {
+    display: none;
+}
+
+.w-50 img {
+    border: 2px solid #cec7bf;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+
+.w-50.pl-2.small.d-flex.flex-column.justify-content-center div {
+    display: block;
+}
+
+img.seasonIcon,img.timeOfDayIcon,img.weatherIcon {
+    border: 0;
+}
+
+/*状态条*/
+
+.progress {
+    background: #0b1a48 !important;
+    border: 2px solid #294399;
+    margin: 2px;
+}
+
+.bg-warning {
+    background: linear-gradient(to left, #294399, #0b1a48) !important;
+}
+
+.bg-danger {
+    background: linear-gradient(to left, #294399, #0b1a48) !important;
+}
+
+.bg-info {
+    background: linear-gradient(to left, #294399, #0b1a48) !important;
+}
+
+.bg-success {
+    background: linear-gradient(to left,  #294399, #0b1a48) !important;
+}
+
+.bg-primary {
+    background: linear-gradient(to left,  #294399, #0b1a48) !important;
+}
+
+/* 图标 */
+i.fa.fa-angle-double-right.fa-lg {
+    color: #cfc9c3;
+}
+
+i.fa.fa-plus.fa-lg{
+    color: #cfc9c3;
+}
+
+/* 主栏 */
+#main {
+    background: linear-gradient(to right,#0c1d4e, #02010a);
+    border-top-right-radius: 25px;
+}
+
+/* 信息提示框 */
+.alert-info {
+    background: linear-gradient(to left, #0e225b, #00000000);
+    border: none;
+    border-right: 6px double #233c88;
+    border-radius: 8px;
+    color: #496fda;
+}
+
+.alert-success {
+    background: linear-gradient(to left, #0e225b, #00000000);
+    border: none;
+    border-right: 6px double #233c88;
+    border-radius: 8px;
+    color: #496fda;
+}
+
+.alert-warning {
+    background: linear-gradient(to left, #0e225b, #00000000);
+    border: none;
+    border-right: 6px double #233c88;
+    border-radius: 8px;
+    color: #496fda;
+}
+
+.alert-info .alert-link {
+    color: #446ad7;
+}
+
+.alert-success .alert-link {
+    color: #7a98eb;
+}
+
+/* 大标题 */
+h1 {
+    font-size: 4.75rem;
+    text-align: center;
+    font-family: Avant Garde;
+    font-variant: small-caps;
+}
+
+/* Den & Profile */
+
+.nav-tabs {
+    border: 0;
+}
+
+.nav-tabs .nav-item {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+}
+
+/* profile */
+
+.nav-tabs {
+    justify-content: center;
+}
+
+.nav-tabs .nav-link {
+    background-color: #00000000;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    padding-left: 7px;
+    padding-top: 2px;
+    font-size: 20px;
+    color: #4a73e7;
+    margin-left: auto;
+    border-radius: 5px;
+    border: 3px solid #00000000;
+    transition: 1s;
+}
+
+/* Den */
+.fa-home:before {
+    content: '\f1b0' !important;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: #00000000;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    padding-left: 7px;
+    padding-top: 2px;
+    font-size: 20px;
+    color: #4a73e7;
+    margin-left: auto;
+    border-radius: 5px;
+    border: 3px solid #00000000;
+    transition: 1s;
+}
+
+.nav-tabs .nav-item {
+    margin-right: 9px;
+}
+
+.nav-link.active{
+    margin-left: 3px;
+}
+
+.input-group-text, .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    color: #2b50bf;
+    background: #d0cac300;
+    border: 3px solid #1f3b8f00;
+}
+
+
+/* 主页信息 */
+.table {
+    background: linear-gradient(to left, #0e225b, #1a295600);
+    transition: 1.5s;
+    border-collapse: separate;
+    border-radius: 15px;
+    border: none;
+    border-right: #233d8a double 6px;
+}
+
+.table th a{
+    color: #3b5cc0;
+    text-transform: uppercase;
+}
+
+.table th {
+    color: #314ea4;
+    text-transform: uppercase;
+    background: #00000000;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background: transparent;
+}
+
+/* 所有狼卡片 */
+#main .card {
+    border: 0;
+    background: #00000000;
+    margin-bottom: 1rem;
+}
+
+/* 特色狼 */
+.col-xl-3.col-sm-5.order-xl-12.order-4.text-center.text-break.featured-wolf {
+    display: none;
+}
+
+/* leader头像 */
+.col-xl-3 {
+    min-width: 50%;
+}
+
+.card.mb-3 {
+    max-height: 200px;
+    max-width: 220px !important; 
+}
+
+.card-img-top[alt="Wolf Headshot"] {
+    border-radius: 110px;
+}
+
+.card-body.pt-1.pb-1 img {
+    display: none;
+}
+
+/* 在线绿灯 */
+.text-success {
+    color: #3655af !important;
+    text-shadow: 0px 0px 4px #3655af;
+}
+
+/* den功能栏 */
+.card-img-top {
+    border: 3px solid #233c89;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+#denCards .card-header {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #00000000;
+    border: 3px solid #233c89;
+    border-top: none;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width:-webkit-fill-available;
+    padding: 5px 5px;
+    backdrop-filter: blur(10px);
+}
+
+/* 狼卡片 */
+.form-row.row-eq-height {
+    border-radius: 25px;
+    transition: 1.5s;
+}
+
+.form-row.row-eq-height:hover {
+    background: #03030f4d;
+    border-radius: 25px;
+}
+
+.table th a {
+    color: #314ea4;
+    text-transform: uppercase;
+}
+
+.text-light {
+    color: #3655af !important;
+}
+
+.bg-dark {
+    background-color: #00000000 !important;
+    color: #2f4a9b !important;
+}
+
+.card-body.bg-light:hover .bg-dark {
+    background-color: #0a174000 !important;
+    color: #4b6ed4 !important;
+}
+
+.b .text-danger {
+    color: #3655af !important;
+}
+
+.card-body.bg-light:hover .b .text-danger{
+    color: #3655af !important;
+}
+
+.bg-light, .btn-light {
+    background: #03041140 !important;
+    color: #446ad6;
+    border: 3px solid #294399;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.card-body.bg-light:hover {
+    background: #0f205a !important;
+    border: 3px solid #294399;
+    color: #618aff !important;
+}
+
+.rounded-right, .rounded-top {
+    border-top-right-radius: 20px !important;
+}
+.rounded-top {
+    border-top-left-radius: 20px !important;
+}
+
+
+/* 狼图片 */
+img.rounded-bottom {
+    border-radius: 15px;
+}
+
+.rounded-bottom, .rounded-left {
+    border-bottom-left-radius: 15px !important;
+}
+.rounded-bottom, .rounded-right {
+    border-bottom-right-radius: 15px !important;
+}
+
+.table .bottom, .table tfoot td {
+    background: #0e225a;
+    border-radius: 10px;
+}
+
+input.form-control, input.form-control:focus, select.form-control, select.form-control:focus,
+ textarea.form-control, textarea.form-control:focus {
+    border-radius: 25px;
+    background: #0d2158;
+    border-color: #2a4bb2;
+    color: #2a4bb2;
+}
+
+/* 原蓝绿按钮 */
+.btn-success {
+    background-color: #132f7c;
+    border: 3px solid #234099;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.btn-primary, .btn-success {
+    color: #4269e2;
+}
+
+.btn-success:hover {
+    color: #4269e2;
+    background-color: #0e2258;
+    border: 3px solid #234099;
+}
+
+.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active,
+ .show>.btn-success.dropdown-toggle {
+    color: #4269e2;
+    background-color: #0e2258;
+    border: 3px solid #234099;
+    border-radius: 25px;
+}
+
+button#btnPreviewDisplay {
+    width: 200px !important;
+}
+
+.btn-info {
+    font-size: 17px;
+    color: #4269e2;
+    background-color: #132f7c;
+    border: 3px solid #234099;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.btn-info:hover {
+    color: #4269e2;
+    background-color: #0e2258;
+    border: 3px solid #234099;
+}
+
+.btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show>.btn-info.dropdown-toggle {
+    color: #4269e2;
+    background-color: #0e2258;
+    border: 3px solid #234099;
+}
+
+/* FAPA */
+
+div#groveServices {
+    background: #00000000;
+}
+
+.accordion .card .card-header {
+    margin-bottom: 5px;
+    background: linear-gradient(to left, #0e225b, #00000000);
+    border-radius: 10px;
+    border-bottom: none;
+    border-right: 6px double #233d8a;
+}
+
+.btn-link {
+    color: #3452a9;
+}
+
+.btn-link:hover {
+    color: #3452a9;
+    text-decoration: none;
+}
+
+a.text-danger:focus, a.text-danger:hover {
+    color: #3655af !important;
+}
+
+select.form-control-sm {
+    height: 30px;
+    border-style: solid none solid solid;
+}
+
+select.form-control.form-control-sm {
+    margin-right: 8px;
+}
+
+option {
+    background: #0d2158;
+}
+
+/* 文本框 */
+.bg-bar-input {
+    background: #3655af;
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+
+.bg-bar-input {
+    background: linear-gradient(to left, #0e225b, #00000000);
+    border-radius: 10px;
+    border-right: 6px double #223b87;
+    margin-bottom: 5px;
+}
+
+.btn.btn-htmlinput {
+    background: #0d2158;
+    border: 3px solid #213a85;
+    border-radius: 25px;
+}
+
+.btn.btn-htmlinput:hover {
+    background: #0d2158;
+    color: #355cd7 !important;
+    border: 3px solid #355cd7;
+}
+
+i.fa.fa-magic {
+    color: #0d2158;
+}
+
+.btn-danger {
+    background-color: #2a479d;
+    border-radius: 25px;
+    border: 2px solid #2a479d;
+    color: #040617;
+    transition: 0.5s;
+}
+
+.btn-danger:hover {
+    background-color: #597eeb;
+    border-radius: 25px;
+    border: 2px solid #597eeb;
+    color: #040617;
+}
+
+.btn-danger:not(:disabled):not(.disabled).active, .btn-danger:not(:disabled):not(.disabled):active, .show>.btn-danger.dropdown-toggle {
+    background-color: #355cd7;
+    border-radius: 25px;
+    border: none;
+    color: #000000;
+}
+
+.text-td-bottom {
+    color: #3655af;
+}
+
+.custom-control-input:checked~.custom-control-label:before {
+    background: #0d2158;
+    border: 1px solid #3655af;
+}
+
+.custom-control-input:focus~.custom-control-label:before {
+    box-shadow: #3655af42;
+}
+
+/* 扩大领地选项 */
+.row.mt-3 {
+    background: #00000000;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    color: #2a4bb2;
+    background: linear-gradient(to left, #0e225b, #00000000);
+    border-bottom: none;
+    border-right: 6px double #223b87;
+    border-radius: 10px !important;
+}
+
+.card-body.pl-1.pr-1 {
+    border: none;
+}
+
+.col-md-6 .card-body {
+    border: none;
+}
+
+.btn-warning{
+    font-size: 17px;
+    color: #4269e2;
+    background-color: #132f7c;
+    border: 3px solid #234099;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.btn-warning:hover {
+    color: #4269e2;
+    background-color: #0e2258;
+    border: 3px solid #234099;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.btn-warning:not(:disabled):not(.disabled).active, .btn-warning:not(:disabled):not(.disabled):active, .show>.btn-warning.dropdown-toggle{
+    color: #4269e2;
+    background-color: #0e2258;
+    border: 3px solid #234099;
+    border-radius: 25px;
+}
+
+/* 底部 */
+#footer {
+    background: linear-gradient(to right, #02010a, #0c1d4e, #0c1d4e, #02010ae0, #02010a);
+    color: #3655af;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#footer a {
+    color: #3655af;
+}
+
+#footer a:hover {
+    color: #3a5cc4;
+}
+
+
+#footer nav .nav-item .nav-link {
+    color: #3655af;
+}
+
+#footer nav .nav-item .nav-link:hover {
+    color: #3655af;
+}
+
+div#uimid+div {
+    color: #3655af !important;
+}
+
+/* profile */
+h1.mb-1 {
+    text-align: left !important;
+}
+
+h1 small {
+    font-size: 18px !important;
+}
+
+.table .left {
+    color: #3655af;
+    background: #00000000;
+    border-radius: 25px;
+}
+
+.card.bg-light.border {
+    border: 1px solid #3655af !important;
+}
+
+.text-muted {
+    color: #3655af !important;
+}
+
+.custom-control-label:before {
+    color: #3655af;
+    border-color: #3655af;
+}
+
+.custom-control-label:before {
+    border-color: #3655af;
+}
+
+.table tfoot td {
+    background-color: #3655af;
+    border-radius: 25px;
+}
+
+/* 添加好友链接 */
+.col a {
+    color: #cfc9c3;
+}
+
+.col a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+textarea#txtProfileHTML::-webkit-scrollbar {
+    width: 10px;
+}
+
+textarea#txtProfileHTML::-webkit-scrollbar-thumb {
+    background: #3151ad !important;
+    border-radius: 10px !important;
+}
+
+textarea#txtProfileHTML::-webkit-scrollbar-track {
+    background: #0a1021 !important;
+    border-radius: 10px !important;
+}
